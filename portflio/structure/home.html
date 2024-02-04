@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../style/style_home.css">
+    <script src="ddd.js"></script>
+</head>
+<body>
+     <nav>
+            <div class="main">
+                    <div class="icon home_1">
+                        <a href="#information"><i class='bx bx-home' id="home"></i></a>
+                        <a href="#information" id="menu">Home</a>
+                    </div>
+                    <div class="icon twt">
+                        <a href="#about"><i class='bx bxs-user'></i></a>
+                        <a href="#about" id="menu">About me</a>
+                    </div>
+                    <div class="icon lnk">
+                        <a href="contact.html"><i class='bx bx-envelope-open'></i></a>
+                        <a href="contact.html" id="menu">contact</a>
+                    </div>
+                    <div class="icon git">
+                        <a href="portflio.html"><i class='bx bx-briefcase'></i></a>
+                        <a href="portflio.html" id="menu">Portflio</a>
+                    </div>
+                    <div class="icon yt">
+                        <a href="skills.html"><i class='bx bx-code-alt'></i></a>
+                        <a href="skills.html" id="menu">Skills</a>
+                    </div>
+                    <div class="icon yt">
+                        <i class='bx bx-moon'></i>
+                    </div>
+            </div>
+            <script>
+                const savedTheme = localStorage.getItem('theme');
+                const bodyElement = document.body;
+    
+                // If a theme preference is saved, apply it
+                if (savedTheme) {
+                    bodyElement.classList.add(savedTheme);
+                }
+    
+                // Add a click event listener to the theme button
+                const themebtn = document.querySelector('.bx-moon');
+                themebtn.addEventListener('click', () => {
+                    // Toggle 'light' class on body
+                    bodyElement.classList.toggle('light');
+    
+                    // Check if 'light' class is present, and save the theme preference in localStorage
+                    if (bodyElement.classList.contains('light')) {
+                        localStorage.setItem('theme', 'light');
+                    } else {
+                        localStorage.removeItem('theme');
+                    }
+                }); 
+            </script>
+
+    </nav>
+        <section class="information" id="information">
+            <div id="info">
+                <h1>Hi, I'm <span>Najeh Saidani</span></h1>
+                <div class="animated">
+                    <h3>Frontend developer</h3>
+                </div>
+                <p>Chase your dreams, embrace the challenges, and code your way to success – every line of code you write is a step closer to turning your vision into reality.</p>
+                <div class="about">
+                    <a href="https://www.facebook.com/najeh.saidani.507" class="btn"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://github.com/Najehsaidani" class="btn"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.instagram.com/najeh_saidanii/?igsh=MXFiN2dva2N0cXYyaA%3D%3D" class="btn"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+            <div id="box-image">
+                <div class="image">
+                    <img src="../image/ns-removebg-preview.png" alt="">
+                </div>
+    
+            </div>
+    
+        </section>
+        <section class="main_container" id="about">
+            <h1>About me</h1>
+                <div class="kio">
+                    <div class="introImage">
+                        <img src="../image/ns.jpg" alt="A picture of me.">
+                        <span id="circle"></span>
+                    </div>
+                    <ul>
+                        <li>
+                            <span>Full name:</span> Najeh Saidani.
+                        </li>
+                        <li>
+                            <span>Date of birth:</span> 27st of october 2003.
+                        </li>
+                        <li>
+                            <span>Country of origin:</span> Tunisia. 
+                        </li>
+                        <li>
+                            <span>Current country of residence:</span> Tunisia.
+                        </li>
+                        <li>
+                            <span>Current education level:</span> 1st year of university.
+                        </li>
+                        <li>
+                            <span>Spoken languages:</span> English (Intermediate), French (Intermediate), Arabic (Native).
+                        </li>
+                    </ul>
+                </div>
+                <div class="introText">
+                        <p>
+                            Greetings, I'm Najeh, a dedicated and aspiring backend software developer driven by a passion for crafting efficient and scalable solutions. My proficiency spans multiple programming languages, underscoring my commitment to versatility and adaptability in the dynamic field of software development. Fueled by a strong foundation in coding and problem-solving, I am eager to channel my skills and enthusiasm into contributing to innovative projects that push the boundaries of technological excellence.
+                        </p>
+                </div>
+        </section>
+       
+    
+
+    
+</body>
+</html>
