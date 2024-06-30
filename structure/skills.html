@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="../style/stylesk.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="ddd.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="main">
+                <div class="icon home_1">
+                    <a href="../index.html"><i class='bx bx-home' id="home"></i></a>
+                    <a href="../index.html" id="menu">Home</a>
+                </div>
+                <div class="icon twt">
+                    <a href="../index.html #about"><i class='bx bxs-user'></i></a>
+                    <a href="../index.html #about" id="menu">About me</a>
+                </div>
+                <div class="icon lnk">
+                    <a href="contact.html"><i class='bx bx-envelope-open'></i></a>
+                    <a href="contact.html" id="menu">contact</a>
+                </div>
+                <div class="icon git">
+                    <a href="portflio.html"><i class='bx bx-briefcase'></i></a>
+                    <a href="portflio.html" id="menu">Portflio</a>
+                </div>
+                <div class="icon yt">
+                    <a href="skills.html"><i class='bx bx-code-alt'></i></a>
+                    <a href="skills.html" id="menu">SKILLS</a>
+                </div>
+                <div class="icon yt">
+                    <i class='bx bx-moon'></i>
+                </div>
+                <script>
+                    const savedTheme = localStorage.getItem('theme');
+                    const bodyElement = document.body;
+        
+                    // If a theme preference is saved, apply it
+                    if (savedTheme) {
+                        bodyElement.classList.add(savedTheme);
+                    }
+        
+                    // Add a click event listener to the theme button
+                    const themebtn = document.querySelector('.bx-moon');
+                    themebtn.addEventListener('click', () => {
+                        // Toggle 'light' class on body
+                        bodyElement.classList.toggle('light');
+        
+                        // Check if 'light' class is present, and save the theme preference in localStorage
+                        if (bodyElement.classList.contains('light')) {
+                            localStorage.setItem('theme', 'light');
+                        } else {
+                            localStorage.removeItem('theme');
+                        }
+                    }); 
+                </script>
+        </div>
+
+</nav>
+    <section id="skills" class="skills">
+        <div class="main-text"> 
+            <h2>My SKILLS</h2>
+            <div class="animated">
+                <span>Technical and Professionel</span>
+            </div>
+        </div>
+        <div class="skill_main">
+            <div class="skill-left">
+                <h3>Technical SKILLS</h3>
+                <div class="skill-bar">
+                    <div class="info">
+                        <p><i class='bx bxl-html5' ></i>HTML</p>
+                        <p>92%</p>
+                    </div>
+                    <div class="bar">
+                        <span class="html"></span>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="info">
+                        <p><i class='bx bxl-python' ></i>Python</p>
+                        <p>20%</p>
+                    </div>
+                    <div class="bar">
+                        <span class="python"></span>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="info">
+                        <p><i class='bx bxl-css3'></i>CSS</p>
+                        <p>55%</p>
+                    </div>
+                    <div class="bar">
+                        <span class="css"></span>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="info">
+                        <p><i class='bx bxl-javascript' ></i>JAVA-Script</p>
+                        <p>22%</p>
+                    </div>
+                    <div class="bar">
+                        <span class="Java_script"></span>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="info">
+                        <p><img src="../image/logo_C.png" id="alpha" alt=""> Language C</p>
+                        <p>32%</p>
+                    </div>
+                    <div class="bar">
+                        <span class="C"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-right">
+                <h3>Professionel SKILLS</h3>
+                <div class="professenional">
+                    <div class="box">
+                        <div class="circle" data-dots="60" data-percent="30"></div>
+                        <div class="text">
+                            <big>30%</big>
+                            <small>Team work</small>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="circle" data-dots="60" data-percent="60"></div>
+                        <div class="text">
+                            <big>60%</big>
+                            <small>Creativity</small>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="circle" data-dots="60" data-percent="80"></div>
+                        <div class="text">
+                            <big>80%</big>
+                            <small>Project Management</small>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="circle" data-dots="60" data-percent="70"></div>
+                        <div class="text">
+                            <big>70%</big>
+                            <small>Commiunication</small>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+    
+</body>
+</html>

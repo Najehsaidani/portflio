@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/stylep.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Portflio</title>
+    
+</head>
+<body>
+    <nav>
+        <div class="main">
+                <div class="icon home_1">
+                    <a href="../index.html"><i class='bx bx-home' id="home"></i></a>
+                    <a href="../index.html" id="menu">Home</a>
+                </div>
+                <div class="icon">
+                    <a href="../index.html #about"><i class='bx bxs-user'></i></a>
+                    <a href="../index.html #about" id="menu">About me</a>
+                </div>
+                <div class="icon">
+                    <a href="contact.html"><i class='bx bx-envelope-open'></i></a>
+                    <a href="contact.html" id="menu">contact</a>
+                </div>
+                <div class="icon">
+                    <a href="portflio.html"><i class='bx bx-briefcase'></i></a>
+                    <a href="portflio.html" id="menu">Portflio</a>
+                </div>
+                <div class="icon">
+                    <a href="skills.html"><i class='bx bx-code-alt'></i></a>
+                    <a href="skills.html" id="menu">SKILLS</a>
+                </div>
+                <div class="icon">
+                    <i class='bx bx-moon'></i>
+                </div>
+                <script>
+                    const savedTheme = localStorage.getItem('theme');
+                    const bodyElement = document.body;
+        
+
+                    if (savedTheme) {
+                        bodyElement.classList.add(savedTheme);
+                    }
+        
+                    // Add a click event listener to the theme button
+                    const themebtn = document.querySelector('.bx-moon');
+                    themebtn.addEventListener('click', () => {
+                        // Toggle 'light' class on body
+                        bodyElement.classList.toggle('light');
+        
+                        // Check if 'light' class is present, and save the theme preference in localStorage
+                        if (bodyElement.classList.contains('light')) {
+                            localStorage.setItem('theme', 'light');
+                        } else {
+                            localStorage.removeItem('theme');
+                        }
+                    }); 
+                </script>
+        </div>
+    </nav>
+    <div class="flex">
+        <h1>MY PORTFOLIO</h1>
+        <div class="portflio-gallery">
+            <div class="port-box mix Web">
+                <div class="port-image">
+                    <img src="../image/bg.jpeg" alt="">
+                </div>
+                <div class="port-content">
+                    <h3>Frontend developer</h3>
+                    <p>web Ns-Coding is  a website  that showcases my skills in web  development, I have created this site using HTML5, CSS3 and JavaScript.</p>
+                        <a href="https://github.com/Najehsaidani/ns_coding" class="btn"><i class='bx bxl-github'></i></a>
+                </div>    
+            </div>
+       </div>
+    </div>
+    
+</body>
+</html>

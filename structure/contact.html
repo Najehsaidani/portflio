@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../style/pmp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+
+</head>
+
+<body>
+    <nav>
+        <div class="main">
+                <div class="icon home_1">
+                    <a href="../index.html"><i class='bx bx-home' id="home"></i></a>
+                    <a href="../index.html" id="menu">Home</a>
+                </div>
+                <div class="icon twt">
+                    <a href="../index.html #about"><i class='bx bxs-user'></i></a>
+                    <a href="../index.html #about" id="menu">About me</a>
+                </div>
+                <div class="icon lnk">
+                    <a href="#contact"><i class='bx bx-envelope-open'></i></a>
+                    <a href="#contact" id="menu">contact</a>
+                </div>
+                <div class="icon git">
+                    <a href="portflio.html"><i class='bx bx-briefcase'></i></a>
+                    <a href="portflio.html" id="menu">Portflio</a>
+                </div>
+                <div class="icon yt">
+                    <a href="skills.html"><i class='bx bx-code-alt'></i></a>
+                    <a href="skills.html" id="menu">SKILLS</a>
+                </div>
+                <div class="icon yt">
+                    <i class='bx bx-moon'></i>
+                </div>
+        </div>
+        <script>
+            const savedTheme = localStorage.getItem('theme');
+            const bodyElement = document.body;
+
+            // If a theme preference is saved, apply it
+            if (savedTheme) {
+                bodyElement.classList.add(savedTheme);
+            }
+
+            // Add a click event listener to the theme button
+            const themebtn = document.querySelector('.bx-moon');
+            themebtn.addEventListener('click', () => {
+                // Toggle 'light' class on body
+                bodyElement.classList.toggle('light');
+
+                // Check if 'light' class is present, and save the theme preference in localStorage
+                if (bodyElement.classList.contains('light')) {
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    localStorage.removeItem('theme');
+                }
+            }); 
+        </script>
+</nav>
+    <section class="container contact" id="contact">
+        <div class="contact-container">
+            <div class="main-title">
+                <h2>Contact Me</h2>
+            </div>
+            <div class="contact-content-con">
+                <div class="left-contact">
+                    <h4>Contact me here</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="icon1">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Location</span>
+                            </div>
+                            <p>
+                                 <a href="https://maps.app.goo.gl/ukXBxVMWf7agCztT8">Tunisia, Bizerte</a>
+                            </p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon1">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                            </div>
+                            <p>
+                                <span><a href="mailto:najehsaidani241">najehsaidani241@gmail.com</a></span>
+                            </p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon1">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>Education</span>
+                            </div>
+                            <p>
+                                <span><a href="https://maps.app.goo.gl/8iyAAotAnY1uwy328"> Tunisia, ISET Bizerte</a></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-contact">
+                    <form action="" class="contact-form">
+                        <div class="input-control i-c-2">
+                            <input type="text" required placeholder="YOUR NAME">
+                            <input type="email" required placeholder="YOUR EMAIL">
+                        </div>
+                        <div class="input-control">
+                            <input type="text" required placeholder="ENTER SUBJECT">
+                        </div>
+                        <div class="input-control">
+                            <textarea name="" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
+                        </div>
+                        <div class="submit-btn">
+                            <a href="#" class="main-btn">
+                                <span class="btn-text">Send</span>
+                                <span class="btn-icon"><i class='bx bx-send'></i></span>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root{
+    --text-color:#f5f5f5;
+    --hover-color:#0ef;
+    --ab-color:#12141d;
+    --scon--bg-color:#292e33;
+    --f-color:rgb(63, 156, 232);
+    --big--font:2.5rem;
+    --git:#f5f5f5;
+    --normal--font:2.5rem;
+    --neon--box--shadow:0 0 .5rem  #12f7ff;
+    --animation:anim 80s linear infinite;
+    --h2--font:3rem;
+    --b-size:none; 
+    --anim:url("https://codetheworld.io/wp-content/uploads/2023/11/rNPwjWM-animated-text-fill.png");
+    
+    --font--neon--text--shadow:0 0 10px var(--hover-color),
+    0 0 20px var(--hover-color),0 0 30px var(--hover-color),
+    0 0 40px var(--hover-color),0 0 70px var(--hover-color),
+    0 0 80px var(--hover-color),0 0 100px var(--hover-color),0 0 150px var(--hover-color);
+}
+.light{
+    --text-color:#12141d;
+    --git:#f5f5f5;
+    --hover-color:rgb(231, 51, 90);
+    --ab-color:blak;
+    --scon--bg-color:#292e33;
+    --f-color:rgb(231, 50, 50);
+    --p-c1:rgb(51, 231, 180);;
+    --c-p:#636363;
+    --big--font:2.5rem;
+    --normal--font:2.5rem;
+    --b-size:400%;
+    --animation: gard 20s linear infinite;
+    --neon--box--shadow:0 0 .5rem  #12f7ff;
+    --h2--font:3rem;
+   --anim:linear-gradient(130deg, var(--c-p) 15%, var(--p-c1) 20%, var(--p-c1) 45%,var(--c-p) 50%, var(--p-c1) 55%, var(--p-c1) 80%,var(--c-p) 85%,var(--p-c1) 100%);
+    --font--neon--text--shadow:0 0 10px var(--hover-color),
+    0 0 20px var(--hover-color),0 0 30px var(--hover-color),
+    0 0 40px var(--hover-color),0 0 70px var(--hover-color),
+    0 0 80px var(--hover-color),0 0 100px var(--hover-color),0 0 150px var(--hover-color),;
+}
+@keyframes gard {
+  0% {
+      background-position: 0%;
+  }
+  100% {
+      background-position: 400%;
+  }
+}
+ body{
+    background-color: var(--ab-color);
+ }
+ *{margin: 0; padding: 0; box-sizing: 
+    border-box;font-family: 'Poppins',sans-serif;text-decoration: none;scroll-behavior: smooth;}
+ /*--------------------------------nav------*/
+ nav{
+    position: fixed;
+    top:0;
+    z-index: 100;
+ }
+.main{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    
+}
+.icon{
+    width: 60px;
+    height: 50px;
+    border-radius: 100px;
+    margin: 10px 10px;
+    background: transparent;
+    text-align: center;
+    font-size: 25px;
+    color: var(--text-color);
+    line-height: 40px;
+    font-family: sans-serif;
+    overflow: hidden;
+    transition: all .3s ease-out;
+
+}
+
+
+@keyframes anim {
+0% {
+    background-position: 0% 50%;
+}
+25% {
+    background-position: 25% 50%;
+}
+50% {
+    background-position: 50% 50%;
+}
+75% {
+    background-position: 75% 50%;
+}
+
+100% {
+    background-position: 100% 50%;
+}
+}
+.entete{
+justify-self:start ;
+}
+.icon #menu{
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+.icon:hover{
+    width: 200px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: var(--anim);
+    -webkit-background-clip: text;
+    background-size: var(--b-size);
+    -webkit-text-fill-color: transparent;
+    animation: var(--animation);
+}
+.icon a{
+    color: var(--text-color);
+}
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+.flex{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    gap: 50px;
+}
+.flex h1{
+    text-align: center; 
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.3;
+    background: var(--anim);
+    -webkit-background-clip: text;
+    background-size: var(--b-size);
+    -webkit-text-fill-color: transparent;
+    animation: var(--animation);
+}
+.portflio-gallery{
+    height: 600px;
+    width: 700px;
+}
+.port-box{
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #292e33;
+    border: 2px solid var(--hover-color);
+    box-shadow: 0px 0px 25px 1px var(--hover-color);
+    margin-left: 5rem;
+
+}
+.port-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.port-image img{
+    width: 100%;
+    opacity: .5;
+    height: 100%;
+    transition: 0.5s ;
+}
+.port-content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.2),var(--hover-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--ab-color);
+
+}
+.port-box:hover .port-content{
+    opacity: 1;
+}
+.port-box:hover .port-image img{
+    transform:scale(1.2);
+}
+.port-content h3{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.port-content p{
+    font-size: .8rem;
+    margin: 5px 0 15px 0;
+}
+.port-content a{
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--hover-color);
+    outline: 2px solid #12141d;
+}
+.port-content a i{
+    font-size: 2rem;
+    color: black;
+}
+@media screen and (max-width:955px) {
+
+    .portflio-gallery {
+        height: 500px;
+        width: 600px;
+    }
+    .flex h1{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:955px) {
+
+    .portflio-gallery {
+        height: 500px;
+        width: 500px;
+    }
+}
+@media screen and (max-width:900px) {
+    .main_container .kio {
+        flex-direction: column;
+    }
+.cont{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main_container{
+    margin-left: 100px;
+}
+
+}
+@media screen and (max-width:1155px){
+    .information{
+        flex-direction: column-reverse;
+        gap: 70px;
+        margin-top: 30vh;
+    }
+    main{
+        height: 100vh;
+    }
+    nav{
+        top: 70px;
+    }
+    .icon{
+        margin: 26px 10px;
+        font-size: 32px;
+        
+    }
+    .image{
+        margin-bottom: 0px;
+    }
+
+}
+@media screen and (max-width:850px) {
+    .information{
+        margin-top: 15vh;
+        padding: 0 11%;
+    }
+    .icon{
+        margin: 26px 10px;
+        font-size: 28px;
+        
+    }
+    .image {
+        height: 300px;
+        width: 300px;
+    }
+    .information #info h1{
+        font-size: 2rem;
+    
+    }
+    .information #info .animated h3{
+        font-size: 1.5rem;
+    }
+    
+.information #info .animated{
+    width: 15.2rem;
+}
+.information #info .animated h3{
+    background-position: -15.4rem 0;
+
+}
+@keyframes home {
+    0%,10%,100%{
+        background-position: -15.4rem 0 ;
+    }
+    65%,85%{
+        background-position: 0 0;
+    }
+
+}
+@keyframes homecd {
+    0%,10%,100%{
+        width:  0 ;
+    }
+    75%,81%{
+        opacity: 0;
+    }
+    65%,78%,85%{
+        width: 100%;
+        opacity: 1;
+    }
+    
+
+}
+.icon #menu {
+    font-size: 19px;
+}
+#info{
+    text-align: center;
+}
+.information #info .animated{
+    text-align: center;
+}
+.portflio-gallery {
+    height: 900px;
+    align-self: end;
+    margin-right: 75px;
+    width: 70%;
+}
+.flex h1{
+    padding-left: 150px;
+}
+}
+/*--------------------------------------ppppppppppppppp---------------------------------------------------*/
+@media screen and (max-width:610px){
+    .information{
+        flex-direction: column-reverse;
+        gap: 70px;
+        margin-top: 30vh;
+        margin-left: auto;
+    }
+    .information #info h1{
+        font-size: 2.5rem;
+    
+    }
+    .information #info .animated h3{
+        font-size: 1.5rem;
+    }
+    .image {
+        height: 270px;
+        width: 270px;
+    }
+    .icon{
+        margin: 12px auto;
+        font-size: 25px;
+        
+    }
+    .flex h1{
+        padding-left:0px;
+        margin-top: 100px;    
+    }
+    .main{
+        height: 8vh;
+        flex-direction:row;
+        align-items: start;
+        justify-content: start;
+       
+    }
+    nav{
+        top: 0;
+        left: 0; 
+        background-color: var(--ab-color);
+        width: 100%;
+    }
+    .icon #menu {
+        font-size: 19px;
+    }
+    .introText p {
+        font-size: 0.75rem;
+    }
+    .main_container {
+        margin-left: auto;
+    }
+    .skills {
+        color: var(--ab-color);
+        margin-left: 0px;
+    }
+
+}
+.main_container{
+    text-align: center;
+}
+@media screen and (max-width:370px) {
+    .icon #menu {
+        font-size: 14px;
+    }
+    .port-content h3 {
+        font-size: .75rem;}
+.port-content p {
+    font-size: .3rem;
+}
+.port-image {
+    height: 200px;}
+    .icon{
+        margin: 0px 0px;
+        font-size: 20px;
+        
+    }
+    .icon{
+        margin: 0px 0px;
+        font-size: 20px;
+        
+    }
+    .image {
+        height: 250px;
+        width: 250px;
+    }
+    .main{
+        height: 6vh;
+    }
+    .information{
+        margin-top: 10vh;
+    }
+    .flex h1{
+        padding-left:0px;
+        margin-top: 100px;
+        font-size: 1.5rem;    
+    }
+    .portflio-gallery {
+        height: 900px;
+        align-self: end;
+        margin-right: 75px;
+        width: 50%;
+    }
+}
+@media screen and (max-width:500px) {
+    .main_container h1{
+        font-size: 2rem;
+    }}
+@media screen and (max-width:450px) {
+    .information #info h1{
+        font-size: 1.75rem;
+    
+    }
+    .information #info .animated h3{
+        font-size: 1.25rem;
+    }
+    .information #info p{
+        font-size: 0.65rem;
+    }
+    #info{
+        text-align: center;
+    }
+    .information{
+        margin-top: 3vh;
+    }
+    .information #info .animated{
+        width: 13.2rem;
+    }
+    .information #info .animated h3{
+        background-position: -13.4rem 0;
+    
+    }.main_container .kio ul{
+        font-size: 0.8rem;
+    }
+    .main_container .introImage p{
+        font-size: 1rem;}
+    @keyframes home {
+        0%,10%,100%{
+            background-position: -13.4rem 0 ;
+        }
+        65%,85%{
+            background-position: 0 0;
+        }
+    
+    }
+    @keyframes homecd {
+        0%,10%,100%{
+            width:  0 ;
+        }
+        75%,81%{
+            opacity: 0;
+        }
+        65%,78%,85%{
+            width: 100%;
+            opacity: 1;
+        }
+        
+    
+    }
+    .port-content h3{
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+    .port-content p{
+        font-size: .5rem;
+    }
+    .port-content a{
+        width: 35px;
+        height: 35px;
+    }
+}
+@media screen and (max-width:610px){
+    .portflio-gallery {
+        height: 500px;
+        align-self: end;
+        margin-right: 30px;
+        width: 100%;
+    }
+    .port-content a i{
+        font-size: 1.25rem;
+        color: var(--ab-color);
+    }
+}
